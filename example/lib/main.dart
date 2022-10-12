@@ -21,7 +21,6 @@ class MainApp extends StatelessWidget {
         brightness: Brightness.light,
         primarySwatch: primary,
         appBarTheme: themeData.appBarTheme.copyWith(
-          brightness: Brightness.light,
           elevation: 0.5,
           color: Colors.white,
           actionsIconTheme: themeData.primaryIconTheme.copyWith(
@@ -29,12 +28,15 @@ class MainApp extends StatelessWidget {
           ),
           iconTheme: themeData.primaryIconTheme.copyWith(
             color: primary,
-          ),
-          textTheme: themeData.primaryTextTheme.copyWith(
+          ), systemOverlayStyle: SystemUiOverlayStyle.dark, toolbarTextStyle: themeData.primaryTextTheme.copyWith(
             headline6: themeData.textTheme.headline6?.copyWith(
               color: primary,
             ),
-          ),
+          ).bodyText2, titleTextStyle: themeData.primaryTextTheme.copyWith(
+            headline6: themeData.textTheme.headline6?.copyWith(
+              color: primary,
+            ),
+          ).headline6,
         ),
       ),
       darkTheme: ThemeData(

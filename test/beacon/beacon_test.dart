@@ -121,6 +121,7 @@ main() {
     ];
     expect(Beacon.beaconArrayToJson(beacons) is List<dynamic>, isTrue);
     expect(
+        // ignore: unnecessary_type_check
         Beacon.beaconFromArray(Beacon.beaconArrayToJson(beacons))
             is List<Beacon>,
         isTrue);
